@@ -1,0 +1,105 @@
+<html>
+<head>
+    <title>Meditation</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+    
+        button{
+            width: 160px;
+            height: 40px;
+            background-color: blue;
+            color: white;
+        
+        }
+    
+    </style>
+    <script src="js/index.js"></script>
+    <script src="js/call.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>
+		
+</head>    
+<body style="background-image: url(img/hosp.jpg); background-repeat: no-repeat; background-size: cover">
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="callform.html">Add Info</a>
+ 
+  <a href="hospitals.html">Hospitals</a>
+  <a href="firstaid.html">First Aid</a>
+  <a href="nutrition.html">Nutrition</a>
+  <a href="timer.html">Meditation</a>
+  <a href="yogavideos.html">Exercise</a>
+  <a href="games.html">Mini Games</a>
+  <a href="About.html">About Us</a>
+  <br>
+     
+  <a href="callform.html"><button id="bt1" onclick="callemergency()" style="background-color: green;border-color: greenyellow;color:white">Call</button></a>
+  <a href="tel:100"><button onclick="callpolice()" style="background-color: red;border-color: yellow;color:white">Police</button></a>
+  <a href="tel:108"><button onclick="callambulance()" style="background-color: blue;border-color: skyblue;color:white">Ambulance</button></a>
+  <a href="tel:101"><button onclick="callfire()" style="background-color: firebrick;border-color: red;color:white">Fire</button></a>      
+</div>
+   
+<!-- Use any element to open the sidenav -->
+    <span onclick="openNav()">
+    <div class="container" onclick="myFunction(this)" ></div>    
+    <div class="bar1" style="background-color:black"></div>
+    <div class="bar2" style="background-color:black"></div>
+    <div class="bar3" style="background-color:black"></div>
+    </span>      
+    
+    <h2 id="id1"></h2>
+   	<center>
+     <button onclick="set(00,30)">30 seconds</button>
+     <button onclick="set(01,00)">1 minute</button>
+        <br><br>
+    <button onclick="set(02,00)">2 minutes</button>
+    <button onclick="set(05,00)">5 minutes</button>
+    <br><br>
+        <button onclick="set(10,00)">10 minutes</button>
+    <button onclick="set(30,00)">30 minutes</button></center>
+    <br>
+    <br>
+    <center>   <div style="font-size: 40px" >Time left = <span id="timer"></span></div><br><br>
+     
+    <a href="https://www.youtube.com/watch?v=IKHSvIUlsrw"><img src="img/YOGAPIC.jpg" width="350px" height="300px"></a> </center>
+    <script>
+        function set(m,s)
+        {document.getElementById('timer').innerHTML =
+        m + ":" + s;
+         startTimer();
+        }
+function startTimer() {
+  var presentTime = document.getElementById('timer').innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond((timeArray[1] - 1));
+  if(s==59){m=m-1}
+  if(m<0){
+        document.getElementById('timer').innerHTML = "Completed." }
+  else{
+  document.getElementById('timer').innerHTML =
+    m + ":" + s;
+  setTimeout(startTimer, 1000);}
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
+}
+    function fn()
+        {
+            document.getElementById('timer').innerHTML="Timer Reset"
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+

@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Phone call</title>
+        <style>
+            label
+            {
+                font-size:30px;
+                color: lightblue;
+            }
+            .info{
+                margin-left: 70px;
+            }
+            #bt1{
+                border-width: thin;
+                font-family: sans-serif;
+                font-style: none;
+            }
+            label{
+                color: darkblue;
+            }
+        </style>
+        
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body style="background-color: aliceblue;background-size: cover;background-repeat: no-repeat">
+        <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="callform.html">Add Info</a>
+  
+  <a href="hospitals.html">Hospitals</a>
+  <a href="firstaid.html">First Aid</a>
+  <a href="nutrition.html">Nutrition</a>
+  <a href="timer.html">Meditation</a>
+  <a href="yogavideos.html">Exercise</a>
+  <a href="games.html">Mini Games</a>
+  <a href="About.html">About Us</a>
+  <br>
+   
+  <a href="callform.html"><button id="bt1" onclick="callemergency()" style="background-color: green;border-color: greenyellow;color:white">Call</button></a>
+  <a href="tel:100"><button onclick="callpolice()" style="background-color: red;border-color: yellow;color:white">Police</button></a>
+  <a href="tel:108"><button onclick="callambulance()" style="background-color: blue;border-color: skyblue;color:white">Ambulance</button></a>
+  <a href="tel:101"><button onclick="callfire()" style="background-color: firebrick;border-color: red;color:white">Fire</button></a>      
+</div>
+    <span onclick="openNav()">
+    <div class="container" onclick="myFunction(this)" ></div>    
+    <div class="bar1" style="background-color:black"></div>
+    <div class="bar2" style="background-color:black"></div>
+    <div class="bar3" style="background-color:black"></div>
+    </span>
+        <center><h1 style="font-family:monospace ;font-style:normal;color:whitesmoke">CHILL AND FILL</h1></center>
+            
+        
+      <form >
+        <br>
+        <br>   
+        <span>  
+        <label>First name : </label>
+        <input type="text" id="id1" class="info" style="margin-left: 52px" id="nm" placeholder="Enter your first name">
+          </span>
+        <br>
+        <br>    
+        <label>Last name : </label>    
+        <input type="text" id="id2" class="info" style="margin-left: 60px" id="nm" placeholder="Enter your last name">
+        <br>
+        <br>    
+        <label>Phone no : </label>
+        <input type="text" id="id3" class="info" placeholder="Enter emergency phone number">
+        <br>
+        <br>
+          <br>
+        <center>
+        <button id="bt1" onclick="callfn()"><a href="index.html">>Submit</a></button> 
+          </center>
+            </form>  
+        <script src="js/index.js"></script>
+        <script src="js/call.js"></script>
+            </body>
+</html>

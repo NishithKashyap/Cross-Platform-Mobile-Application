@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>Main page</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        #but1{
+            width: 40px;
+            height: 30px;
+            margin-left: 290px;
+            background-image: url(img/refresh.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 120px;
+            border: none;
+            background-color: lightcyan;
+            align-content: center;
+        }
+    
+    </style>
+    
+    <script src="js/index.js"></script>
+    <script src="js/call.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>
+		
+</head>    
+<body style="background-image: url(img/hosp.jpg); background-repeat: no-repeat; background-size: cover">
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="callform.html">Add Info</a>
+  
+  <a href="hospitals.html">Hospitals</a>
+  <a href="firstaid.html">First Aid</a>
+  <a href="nutrition.html">Nutrition</a>
+  <a href="timer.html">Meditation</a>
+  <a href="yogavideos.html">Exercise</a>
+  <a href="games.html">Mini Games</a>
+  <a href="About.html">About Us</a>
+  <br>
+       
+  <a href="callform.html"><button id="bt1" onclick="callemergency()" style="background-color: green;border-color: greenyellow;color:white">Call</button></a>
+  <a href="tel:100"><button style="background-color: red;border-color: yellow;color:white">Police</button></a>
+  <a href="tel:108"><button onclick="callambulance()" style="background-color: blue;border-color: skyblue;color:white">Ambulance</button></a>
+  <a href="tel:101"><button onclick="callfire()" style="background-color: firebrick;border-color: red;color:white">Fire</button></a>      
+</div>
+      <center><img src="img/We-Care-Logo.jpg"  width=200px height=100px></center>
+ <span style="float: left" onclick="openNav()">
+    <div class="container" onclick="myFunction(this)" ></div>    
+    <div class="bar1" style="background-color:black"></div>
+    <div class="bar2" style="background-color:black"></div>
+    <div class="bar3" style="background-color:black"></div>
+    </span>
+    <div style="float: right">
+        <br><br>
+    <button value="Refresh Page" onClick="window.location.href=window.location.href" id="but1"></button>
+        <br><br>
+    </div>
+    
+    <br>
+    <img src="https://source.unsplash.com/1600x900/?nature,water,snow" width="100%" height="40%">
+    <br>
+    <h2 id="id1"></h2>
+   	<h2 style="font-family: cursive;font-style: italic">Boy she sure has a sense of humor for an "older lady". Hmm, what does THAT mean? Getting older can sometimes mean finding more funny things in life. After all, "I've paid my dues!" "I've raised my kids." "I want to have fun." Aging and getting older should be fun! Aging should include a fun sense of humor!</h2>
+    
+    <h2 style="font-family: cursive;font-style: italic">Some people try to turn back their odometers. Not me! My theory on aging is that I want people to know 'why' I look this way. I've traveled a long way and many of the roads weren't paved.</h2>
+
+<h2 style="font-family: cursive;font-style: italic">First you forget names, then you forget faces. Then you forget to pull up your zipper.
+
+Being young is beautiful, but being old is comfortable.</h2>
+
+<h2 style="font-family: cursive;font-style: italic">When you are dissatisfied and would like to go back to your youth, remember Algebra.
+
+One of the many things no one tells you about aging is that it is better than being young.
+
+You know you are getting old when everything either dries up or leaks.</h2>
+
+<h2 style="font-family: cursive;font-style: italic">Life should NOT be a journey to the grave with the intention of arriving safely in an attractive and well preserved body, but rather to skid in sideways, chocolate in one hand, martini in the other, body thoroughly used up, totally worn out and screaming "WOO HOO what a ride!"</h2>
+    <script>
+    	var x;
+    	    	$.getJSON('https://api.quotable.io/random', function(data) {
+  		x = (`${data.content} —${data.author}`)
+  		document.getElementById("id1").innerHTML = x;
+	})
+
+    function alertDismissed() {
+    // do something
+	}
+
+	navigator.notification.alert(
+	    'You are the winner!',  // message
+	    alertDismissed,         // callback
+	    'Game Over',            // title
+	    'Done'                  // buttonName
+	);
+    		  
+	</script>
+    
+    
+</body>
+
+</html>
